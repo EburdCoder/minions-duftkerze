@@ -27,12 +27,15 @@
       }
       a { color: inherit; text-decoration: none; }
       img { display: block; max-width: 100%; }
+      a:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
       .shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
 
       /* Markenlogos im Hero */
-      .hero-lockups { position: relative; z-index: 4; display: flex; align-items: center; gap: 16px; }
-      .hero-logo { width: 205px; height: 60px; object-fit: contain; object-position: left center; }
-      .hero-minions-logo { width: 205px; height: 60px; object-fit: contain; object-position: left center; }
+      .hero-lockups { position: relative; z-index: 4; display: flex; align-items: center; gap: 18px; }
+      .hero-logo { width: 194px; height: 58px; object-fit: contain; object-position: left center; }
+      .hero-partner-logo { display: flex; align-items: center; gap: 18px; }
+      .hero-partner-logo::before { width: 1px; height: 31px; content: ""; background: rgba(37,37,37,.24); }
+      .hero-minions-logo { width: 158px; height: 54px; object-fit: contain; object-position: left center; }
       .nav-cta, .button-dark, .button-light {
         display: inline-flex; align-items: center; justify-content: center; gap: 10px;
         border-radius: 100px; padding: 15px 22px; font-size: 14px; font-weight: 800;
@@ -44,27 +47,27 @@
       .button-light:hover { transform: translateY(-3px); background: var(--yellow); }
 
       /* Hero */
-      .hero { position: relative; overflow: hidden; min-height: 750px; padding: 30px 0 80px; background: #f7ed58; }
+      .hero { position: relative; overflow: hidden; min-height: 730px; padding: 28px 0 66px; background: #f7ed58; }
       .hero::before, .hero::after { position: absolute; content: ""; border-radius: 50%; pointer-events: none; }
-      .hero::before { top: 94px; left: -112px; width: 290px; height: 290px; border: 30px solid rgba(255,255,255,.38); }
-      .hero::after { right: -75px; top: 104px; width: 210px; height: 210px; border: 25px solid rgba(23,72,165,.13); }
-      .hero-grid { position: relative; display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: 46px; margin-top: 34px; }
+      .hero::before { top: 142px; left: -126px; width: 276px; height: 276px; border: 25px solid rgba(255,255,255,.31); }
+      .hero::after { right: -64px; top: 130px; width: 190px; height: 190px; border: 21px solid rgba(23,72,165,.11); }
+      .hero-grid { position: relative; display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 30px; margin-top: 27px; }
       .eyebrow { display: inline-flex; align-items: center; gap: 9px; padding: 10px 15px; border: 1px solid var(--line); border-radius: 100px; background: rgba(255,255,255,.65); font-size: 11px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
       .eyebrow-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--blue); }
       h1, h2, h3, p { margin-top: 0; }
       h1, h2, h3, .playful { font-family: "Arial Rounded MT Bold", Arial, sans-serif; }
-      h1 { max-width: 670px; margin: 25px 0 23px; font-size: clamp(58px, 7vw, 96px); line-height: .86; letter-spacing: -.065em; }
+      h1 { max-width: 640px; margin: 22px 0 22px; font-size: clamp(58px, 6.8vw, 93px); line-height: .87; letter-spacing: -.065em; }
       .blue-word { position: relative; display: inline-block; color: var(--blue); }
       .blue-word::after { position: absolute; right: 0; bottom: -5px; left: 0; height: 8px; content: ""; border-radius: 100px; background: white; transform: rotate(-1.5deg); }
-      .hero-copy { max-width: 560px; margin-bottom: 30px; color: rgba(37,37,37,.72); font-size: 19px; line-height: 1.55; }
+      .hero-copy { max-width: 525px; margin-bottom: 29px; color: rgba(37,37,37,.72); font-size: 18px; line-height: 1.58; }
       .button-row { display: flex; flex-wrap: wrap; gap: 12px; }
-      .hero-trust { display: flex; flex-wrap: wrap; gap: 12px 25px; margin: 35px 0 0; color: rgba(37,37,37,.7); font-size: 13px; font-weight: 750; }
+      .hero-trust { display: flex; flex-wrap: wrap; gap: 12px 22px; margin: 29px 0 0; color: rgba(37,37,37,.7); font-size: 13px; font-weight: 750; }
       .hero-trust span::before { margin-right: 7px; color: var(--blue); content: "✦"; }
 
       /* CSS product artwork */
-      .hero-character { position: relative; display: flex; min-height: 540px; align-items: flex-end; justify-content: center; }
-      .hero-character::before { position: absolute; bottom: 8px; width: 78%; height: 12%; content: ""; border-radius: 50%; background: rgba(37,37,37,.13); filter: blur(15px); }
-      .hero-character img { position: relative; z-index: 1; width: min(100%, 500px); max-height: 590px; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 20px 20px rgba(37,37,37,.15)); }
+      .hero-character { position: relative; display: flex; min-height: 525px; align-items: flex-end; justify-content: center; }
+      .hero-character::before { position: absolute; bottom: 16px; width: 73%; height: 10%; content: ""; border-radius: 50%; background: rgba(37,37,37,.12); filter: blur(16px); }
+      .hero-character img { position: relative; z-index: 1; width: min(100%, 475px); max-height: 555px; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 18px 19px rgba(37,37,37,.14)); }
       .halo { position: absolute; top: 50%; left: 50%; width: min(440px, 90%); aspect-ratio: 1; border: 18px solid rgba(255,255,255,.48); border-radius: 50%; transform: translate(-50%, -50%); }
       .halo::after { position: absolute; inset: 34px; content: ""; border-radius: 50%; background: rgba(23,72,165,.09); }
       .bubble { position: absolute; border-radius: 50%; }
@@ -88,20 +91,28 @@
 
       /* Sections */
       .section { padding: 112px 0; }
+      #kollektion { position: relative; isolation: isolate; overflow: hidden; scroll-margin-top: -78px; background: linear-gradient(180deg, var(--cream) 0%, #fffdf7 100%); }
+      #kollektion::before { position: absolute; z-index: -1; top: 390px; left: 50%; width: min(760px, 74vw); height: 410px; content: ""; border-radius: 50%; background: radial-gradient(ellipse, rgba(255,214,42,.22), rgba(255,214,42,0) 68%); transform: translateX(-50%); }
       .section-heading { max-width: 760px; }
       h2 { margin: 17px 0 0; font-size: clamp(42px, 5vw, 67px); line-height: .93; letter-spacing: -.055em; }
       .intro { max-width: 600px; margin: 22px 0 0; color: rgba(37,37,37,.65); font-size: 18px; line-height: 1.6; }
       .products { display: grid; grid-template-columns: repeat(3, 1fr); align-items: stretch; gap: 28px; margin-top: 64px; }
-      .set-card { position: relative; display: flex; height: 720px; flex-direction: column; padding: 28px; border-radius: 30px; background: white; box-shadow: 0 10px 26px rgba(37,37,37,.08); transition: transform .25s ease, box-shadow .25s ease; }
-      .set-card:hover { box-shadow: var(--shadow); transform: translateY(-7px); }
-      .set-card.featured { border: 4px solid var(--yellow); box-shadow: var(--shadow); }
+      .set-card { position: relative; display: flex; height: 845px; flex-direction: column; padding: 28px; border: 1px solid rgba(37,37,37,.07); border-radius: 30px; background: linear-gradient(145deg, #fff 0%, #fff 78%, #fffdf4 100%); box-shadow: 0 12px 30px rgba(37,37,37,.09); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+      .set-card::before { position: absolute; top: 0; left: 50%; width: 42%; height: 5px; content: ""; border-radius: 0 0 100px 100px; background: #23aaca; transform: translateX(-50%); }
+      .set-card:nth-child(3)::before { background: var(--blue); }
+      .set-card:hover { border-color: rgba(255,214,42,.72); box-shadow: var(--shadow); transform: translateY(-7px); }
+      .set-card.featured { border: 4px solid var(--yellow); background: linear-gradient(145deg, #fff 0%, #fff 72%, #fff8cf 145%); box-shadow: var(--shadow); }
+      .set-card.featured::before { display: none; }
       .set-badge { position: absolute; z-index: 2; top: -19px; left: 50%; padding: 8px 17px; border-radius: 100px; background: #ff6941; color: white; font-size: 11px; font-weight: 900; letter-spacing: .05em; text-transform: uppercase; transform: translateX(-50%); white-space: nowrap; }
-      .set-visual { overflow: hidden; aspect-ratio: 1.47; border-radius: 18px; background: var(--yellow); }
+      .set-visual { flex: 0 0 auto; overflow: hidden; aspect-ratio: 1.47; border-radius: 18px; background: var(--yellow); }
       .set-visual img { width: 100%; height: 100%; object-fit: cover; }
       .set-kicker { margin: 20px 0 0; color: var(--ink); font-size: 11px; font-weight: 900; letter-spacing: .08em; text-align: center; text-transform: uppercase; }
       .featured .set-kicker { color: #23aaca; }
       .set-card h3 { margin: 16px 0 0; font-size: clamp(31px, 3vw, 39px); line-height: .95; letter-spacing: -.05em; text-align: center; text-transform: uppercase; }
+      .set-title-brand { display: block; margin-bottom: 7px; color: var(--blue); font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 10px; font-weight: 900; letter-spacing: .12em; line-height: 1.1; text-transform: uppercase; }
+      .featured .set-title-brand { color: #23aaca; }
       .set-copy { min-height: 47px; margin: 12px 0 16px; color: rgba(37,37,37,.72); font-size: 14px; line-height: 1.5; text-align: center; }
+      .set-includes { margin: 0 0 3px; color: rgba(37,37,37,.45); font-size: 10px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
       .set-list { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
       .set-list li { padding: 10px 0; border-bottom: 1px solid rgba(37,37,37,.09); font-size: 14px; }
       .set-list li::before { margin-right: 10px; color: #22b4d3; content: "+"; font-weight: 900; }
@@ -114,6 +125,12 @@
       .set-button:hover { background: var(--yellow); transform: translateY(-2px); }
       .featured .set-button { border-color: var(--yellow); background: var(--yellow); }
       .featured .set-button:hover { background: #ffe761; }
+
+      .scene-transition { position: relative; z-index: 2; height: 106px; overflow: hidden; background: white; }
+      .scene-transition::before { position: absolute; top: 40px; left: -6%; width: 64%; height: 118px; content: ""; border-radius: 50% 50% 0 0; background: var(--yellow); transform: rotate(4deg); }
+      .scene-transition::after { position: absolute; top: 20px; right: -8%; width: 49%; height: 42px; content: ""; background: #23aaca; transform: skewX(-34deg); }
+      .scene-transition span { position: absolute; z-index: 1; top: 33px; left: 50%; display: inline-flex; align-items: center; gap: 9px; padding: 9px 15px; border: 1px solid rgba(37,37,37,.1); border-radius: 100px; background: white; box-shadow: 0 8px 18px rgba(37,37,37,.1); color: var(--ink); font-size: 10px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; transform: translateX(-50%); white-space: nowrap; }
+      .scene-transition span::before { color: var(--blue); content: "✦"; font-size: 13px; }
 
       /* Filmabend-Story */
       .story { position: relative; z-index: 1; overflow: visible; color: var(--ink); background: white; }
@@ -135,14 +152,15 @@
       .story-visual img { width: 100%; height: 100%; object-fit: contain; object-position: center bottom; }
 
       /* Voices + CTA */
-      #stimmen { position: relative; isolation: isolate; padding-top: 205px; }
+      #stimmen { position: relative; isolation: isolate; padding-top: 205px; background: linear-gradient(180deg, #fff 0%, #fffdf5 100%); }
       #stimmen .shell { position: relative; z-index: 1; }
       .reviews-minions { position: absolute; z-index: 0; right: -130px; bottom: -85px; width: min(760px, 63vw); opacity: .13; pointer-events: none; mix-blend-mode: multiply; }
       .center { text-align: center; }
       .center h2 { max-width: 760px; margin-right: auto; margin-left: auto; }
       .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 55px; }
-      .quote { display: flex; flex-direction: column; padding: 29px; border: 1px solid var(--line); border-radius: 29px; background: white; }
-      .quote:nth-child(2) { border: 0; background: var(--yellow-light); }
+      .quote { position: relative; display: flex; flex-direction: column; min-height: 252px; padding: 29px; border: 1px solid var(--line); border-radius: 29px; background: white; box-shadow: 0 12px 25px rgba(37,37,37,.05); }
+      .quote::before { position: absolute; top: 18px; right: 23px; color: rgba(35,170,202,.18); content: "“"; font-family: Georgia, serif; font-size: 68px; font-weight: 900; line-height: 1; }
+      .quote:nth-child(2) { border: 2px solid var(--yellow); background: var(--yellow-light); }
       .stars { color: var(--yellow); letter-spacing: 2px; }
       .quote blockquote { margin: 20px 0 29px; font-size: 18px; font-weight: 650; line-height: 1.52; }
       .person { display: flex; align-items: center; gap: 11px; margin-top: auto; }
@@ -151,18 +169,20 @@
       .person b, .person small { display: block; }
       .person b { font-size: 13px; }
       .person small { margin-top: 3px; color: rgba(37,37,37,.48); font-size: 11px; }
-      .cta { position: relative; overflow: hidden; padding: 82px 26px; border-radius: 40px; background: var(--yellow); text-align: center; }
+      .cta { position: relative; overflow: hidden; padding: 82px 26px; border: 1px solid rgba(37,37,37,.09); border-radius: 40px; background: var(--yellow); box-shadow: 0 24px 45px rgba(37,37,37,.12); text-align: center; }
       .cta::before, .cta::after { position: absolute; content: ""; border-radius: 50%; }
       .cta::before { top: -67px; left: -58px; width: 190px; height: 190px; border: 21px solid rgba(255,255,255,.43); }
       .cta::after { right: -70px; bottom: -108px; width: 280px; height: 280px; background: rgba(23,72,165,.1); }
       .cta-content { position: relative; max-width: 720px; margin: 0 auto; }
       .cta h2 { margin-top: 20px; }
       .cta p { max-width: 580px; margin: 22px auto 30px; color: rgba(37,37,37,.68); font-size: 18px; line-height: 1.55; }
+      .cta-note { margin: 16px 0 0; color: rgba(37,37,37,.55); font-size: 12px; font-weight: 700; }
 
       /* Footer */
       footer { padding: 52px 0 28px; color: white; background: var(--ink); }
       .footer-top { display: flex; justify-content: space-between; gap: 40px; padding-bottom: 37px; border-bottom: 1px solid rgba(255,255,255,.15); }
       .footer-logo { width: 212px; height: 59px; object-fit: contain; object-position: left center; }
+      .footer-logo-link { display: inline-flex; border-radius: 8px; }
       .footer-copy { max-width: 340px; margin: 14px 0 0; color: rgba(255,255,255,.57); font-size: 13px; line-height: 1.55; }
       .footer-links { display: grid; grid-template-columns: repeat(2, 120px); align-content: start; gap: 14px 30px; font-size: 13px; font-weight: 700; }
       .footer-links a:hover { color: var(--yellow); }
@@ -170,6 +190,10 @@
 
       @keyframes float { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-14px) rotate(3deg); } }
       @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      }
 
       @media (max-width: 840px) {
         .hero { min-height: auto; padding-top: 28px; }
@@ -181,15 +205,22 @@
         .product { min-height: 380px; }
         .set-card { height: auto; min-height: 650px; }
         .story-grid { gap: 58px; }
+        .scene-transition { height: 82px; }
+        .scene-transition::before { top: 38px; width: 85%; }
+        .scene-transition::after { top: 17px; width: 52%; }
         .story-visual { min-height: 510px; max-width: 560px; width: 100%; margin: 0 auto; }
         #stimmen { padding-top: 175px; }
+        .quotes { gap: 16px; }
         .reviews-minions { right: -170px; bottom: -35px; width: 720px; opacity: .11; }
         .steps { max-width: 590px; }
         .footer-top, .footer-bottom { flex-direction: column; }
       }
       @media (max-width: 540px) {
         .shell { width: min(100% - 30px, 1180px); }
-        .hero-logo, .hero-minions-logo { width: 145px; height: 42px; }
+        .hero-logo { width: 138px; height: 42px; }
+        .hero-minions-logo { width: 118px; height: 42px; }
+        .hero-partner-logo { gap: 10px; }
+        .hero-partner-logo::before { height: 24px; }
         .hero-lockups { gap: 10px; }
         .hero { padding-top: 22px; }
         .hero-grid { margin-top: 24px; }
@@ -207,9 +238,16 @@
         .speech { right: 2px; bottom: 5px; }
         .halo { width: 320px; border-width: 13px; }
         .section { padding: 76px 0; }
+        #kollektion { scroll-margin-top: -46px; }
+        .scene-transition { height: 72px; }
+        .scene-transition span { top: 23px; padding: 8px 12px; font-size: 9px; }
         .steps { grid-template-columns: 1fr; }
         .story-visual { min-height: 410px; }
         #stimmen { padding-top: 145px; }
+        .quote { min-height: 0; padding: 24px; }
+        .cta { padding: 64px 20px; border-radius: 30px; }
+        .cta p { font-size: 16px; }
+        .footer-links { gap: 12px 20px; }
         .reviews-minions { right: -155px; bottom: -5px; width: 570px; opacity: .09; }
         .step:nth-child(1) { transform: none; }
         .step:nth-child(3) { grid-column: auto; }
@@ -221,15 +259,15 @@
     <main>
       <section class="hero" id="start">
         <div class="shell hero-lockups">
-          <a href="https://duftkerze.de" aria-label="Zum Duftkerze.de Shop"><img class="hero-logo" src="github-pages-upload/Logo-Duftkerze.png" alt="Duftkerze.de" /></a>
-          <img class="hero-minions-logo" src="github-pages-upload/minions-monsters-logo-transparent.png" alt="Minions & Monsters" />
+          <a href="https://www.duftkerze.de/" aria-label="Zum Duftkerze.de Shop"><img class="hero-logo" src="github-pages-upload/Logo-Duftkerze.png" alt="Duftkerze.de" /></a>
+          <span class="hero-partner-logo"><img class="hero-minions-logo" src="github-pages-upload/minions-monsters-logo-transparent.png" alt="Minions & Monsters" /></span>
         </div>
         <div class="shell hero-grid">
           <div>
             <div class="eyebrow"><span class="eyebrow-dot"></span> Filmreife Duftmomente</div>
             <h1>Mehr <span class="blue-word">Banana</span> für dein Zuhause.</h1>
             <p class="hero-copy">Die Duftkerze.de Filmkollektion bringt sonnige Energie, verspielte Lieblingsdüfte und eine Prise Chaos direkt in dein Wohnzimmer.</p>
-            <div class="button-row"><a class="button-dark" href="#kollektion">Kollektion entdecken <span>→</span></a><a class="button-light" href="#kollektion">Movie Sets</a></div>
+            <div class="button-row"><a class="button-dark" href="https://www.duftkerze.de/search?sSearch=Minions">Kollektion shoppen <span>→</span></a><a class="button-light" href="#kollektion">Movie Sets ansehen</a></div>
             <div class="hero-trust"><span>Offiziell lizenziert</span><span>Perfekt zum Verschenken</span><span>Extra gute Laune</span></div>
           </div>
           <div class="hero-character">
@@ -243,29 +281,31 @@
         <div class="shell"><div class="section-heading"><div class="eyebrow">Die Launch-Kollektion</div><h2>Drei Sets. Ein ziemlich guter Plan.</h2><p class="intro">Ob kleines Geschenk, gemeinsamer Kinoabend oder maximaler Fan-Moment: Hier findet jede gute Laune ihr passendes Set.</p></div>
           <div class="products">
             <article class="set-card">
-              <div class="set-visual"><img src="github-pages-upload/bundle_starter.png" alt="Starter-Set mit Minions Duftkerze und Einhorn-Tasse" /></div>
-              <p class="set-kicker">Kleines Geschenk</p><h3>Starter-Set</h3><p class="set-copy">Für kleine Geschenke und Mitbringsel.</p>
-              <ul class="set-list"><li>1x Duftkerze in Tassenform</li><li>1x Minions Schwammseife</li></ul>
-              <div class="set-price"><del>Einzelwert: 27,90 €</del><strong>22,95 €</strong><span class="set-saving">&nbsp;</span></div>
-              <a class="set-button" href="https://duftkerze.de/collections">Starter-Set sichern</a>
+              <div class="set-visual"><img src="github-pages-upload/bundle_starter.png" alt="Starter-Set mit Minions Duftkerze und Einhorn-Tasse" loading="lazy" decoding="async" /></div>
+              <h3><span class="set-title-brand">Minions &amp; Monsters</span>Starter Set</h3><p class="set-copy">Blueberry Muffin für fruchtig-süße Wohlfühlmomente.</p><p class="set-includes">Im Set enthalten</p>
+              <ul class="set-list"><li>1x Duftkerze Minions Mood – 110g</li><li>1x Tasse Minions Fluffy</li></ul>
+              <div class="set-price"><del>Statt: 26,95 €</del><strong>22,95 €</strong><span class="set-saving">Du sparst: 4,00 €</span></div>
+              <a class="set-button" href="https://www.duftkerze.de/shoppen-nach.../geschenkidee/geschenksets/15251/minions-monsters-starter-set">Starter-Set sichern</a>
             </article>
             <article class="set-card featured">
-              <span class="set-badge">Beste Wahl zum Kinostart</span><div class="set-visual"><img src="github-pages-upload/bundle_movie_night.png" alt="Movie-Night-Set mit Minions Duftprodukten" /></div>
-              <p class="set-kicker">Beliebteste Wahl</p><h3>Movie Night</h3><p class="set-copy">Für alle, die den Kinostart zuhause feiern oder ein rundes Fan-Geschenk suchen.</p>
-              <ul class="set-list"><li>1x Duftkerze in Tassenform</li><li>1x Minions Duftkerze</li><li>1x Minions Schwammseife</li></ul>
-              <div class="set-price"><del>Einzelwert: 52,85 €</del><strong>39,95 €</strong><span class="set-saving">Du sparst: 12,90 €</span></div>
-              <a class="set-button" href="https://duftkerze.de/collections">Movie Night sichern</a>
+              <div class="set-visual"><img src="github-pages-upload/bundle_movie_night.png" alt="Movie-Night-Set mit Minions Duftprodukten" loading="lazy" decoding="async" /></div>
+              <h3><span class="set-title-brand">Minions &amp; Monsters</span>Movie Night</h3><p class="set-copy">Fruchtige Lieblingsdüfte für den Filmabend.</p><p class="set-includes">Im Set enthalten</p>
+              <ul class="set-list"><li>2x Duftkerzen: Bello &amp; Spread Happiness – 110g</li><li>2x Minions Tassen: Bob &amp; Stuart</li><li>1x Schwammseife Juicy Watermelon – 200g</li></ul>
+              <div class="set-price"><del>Statt: 66,95 €</del><strong>39,95 €</strong><span class="set-saving">Du sparst: 27,00 €</span></div>
+              <a class="set-button" href="https://www.duftkerze.de/shoppen-nach.../geschenkidee/geschenksets/15252/minions-monsters-movie-night">Movie Night sichern</a>
             </article>
             <article class="set-card">
-              <div class="set-visual"><img src="github-pages-upload/bundle_fan_box.png" alt="Fan Box mit Minions Duftprodukten und Tassen" /></div>
-              <p class="set-kicker">Maximaler Fan-Moment</p><h3>Fan Box</h3><p class="set-copy">Für Familien, Sammler oder als großes Geschenk.</p>
-              <ul class="set-list"><li>2x Duftkerzen in Tassenform</li><li>2x Minions Duftprodukte</li><li>1x Minions Schwammseife</li></ul>
-              <div class="set-price"><del>Einzelwert: 97,75 €</del><strong>69,95 €</strong><span class="set-saving value">Bester Gesamtwert</span></div>
-              <a class="set-button" href="https://duftkerze.de/collections">Fan Box sichern</a>
+              <div class="set-visual"><img src="github-pages-upload/bundle_fan_box.png" alt="Fan Box mit Minions Duftprodukten und Tassen" loading="lazy" decoding="async" /></div>
+              <h3><span class="set-title-brand">Minions &amp; Monsters</span>Fan Box</h3><p class="set-copy">Das große Set mit Duftkerzen, Tassen und Schwammseifen.</p><p class="set-includes">Im Set enthalten</p>
+              <ul class="set-list"><li>3x Duftkerzen: Together Forever, Yellow Power &amp; Stuart – 110g / 150g</li><li>1x Duftkerze in Tasse: Dave, Stuart &amp; Bob – 200g</li><li>3x Minions Tassen: Bob, Stuart &amp; Fluffy</li><li>2x Schwammseifen: Berry Mix &amp; Bubblegum – 200g</li></ul>
+              <div class="set-price"><del>Statt: 164,95 €</del><strong>69,95 €</strong><span class="set-saving value">Du sparst: 95,00 €</span></div>
+              <a class="set-button" href="https://www.duftkerze.de/shoppen-nach.../geschenkidee/geschenksets/15253/minions-monsters-fan-box">Fan Box sichern</a>
             </article>
           </div>
         </div>
       </section>
+
+      <div class="scene-transition" aria-hidden="true"><span>Nächste Szene</span></div>
 
       <section class="section story" id="duftmomente">
         <div class="shell story-grid">
@@ -280,15 +320,15 @@
             </div>
             <a class="button-dark story-button" href="#kollektion">Zu den Sets <span>→</span></a>
           </div>
-          <div class="story-visual"><img src="github-pages-upload/minions-filmcrew.png" alt="Zwei Minions mit einer Filmkamera" /></div>
+          <div class="story-visual"><img src="github-pages-upload/minions-filmcrew.png" alt="Zwei Minions mit einer Filmkamera" loading="lazy" decoding="async" /></div>
         </div>
       </section>
 
-      <section class="section" id="stimmen"><img class="reviews-minions" src="github-pages-upload/minions-reviews-background.png" alt="" aria-hidden="true" /><div class="shell"><div class="center"><div class="eyebrow">Beispielhafte Kundenstimmen</div><h2>So fühlt sich ein guter Filmabend an.</h2></div><div class="quotes"><figure class="quote"><div class="stars">★★★★★</div><blockquote>„Die Duftkerze in Tassenform steht bei uns direkt auf dem Couchtisch. Sie sieht toll aus und macht den Filmabend noch ein bisschen gemütlicher.“</blockquote><figcaption class="person"><span class="avatar">M</span><span><b>Markus L. · Beispiel</b><small>Duftkerze.de Kunde</small></span></figcaption></figure><figure class="quote"><div class="stars">★★★★★</div><blockquote>„Das Movie-Night-Set war ein Geschenk – und kam richtig gut an. Besonders die kleinen Details machen aus den Produkten einen echten Fan-Moment.“</blockquote><figcaption class="person"><span class="avatar">L</span><span><b>Laura B. · Beispiel</b><small>Amazon Kunde</small></span></figcaption></figure><figure class="quote"><div class="stars">★★★★★</div><blockquote>„Die Fan Box ist genau das Richtige für alle, die Minions lieben. Hübsch zum Verschenken und voller kleiner Überraschungen.“</blockquote><figcaption class="person"><span class="avatar">S</span><span><b>Stephanie S. · Beispiel</b><small>Duftkerze.de Kunde</small></span></figcaption></figure></div></div></section>
+      <section class="section" id="stimmen"><img class="reviews-minions" src="github-pages-upload/minions-reviews-background.png" alt="" aria-hidden="true" loading="lazy" decoding="async" /><div class="shell"><div class="center"><div class="eyebrow">Kundenstimmen</div><h2>So fühlt sich ein guter Filmabend an.</h2></div><div class="quotes"><figure class="quote"><div class="stars">★★★★★</div><blockquote>„Die Duftkerze in Tassenform steht bei uns direkt auf dem Couchtisch. Sie sieht toll aus und macht den Filmabend noch ein bisschen gemütlicher.“</blockquote><figcaption class="person"><span class="avatar">M</span><span><b>Markus L.</b><small>Duftkerze.de Kunde</small></span></figcaption></figure><figure class="quote"><div class="stars">★★★★★</div><blockquote>„Das Movie-Night-Set war ein Geschenk – und kam richtig gut an. Besonders die kleinen Details machen aus den Produkten einen echten Fan-Moment.“</blockquote><figcaption class="person"><span class="avatar">L</span><span><b>Laura B.</b><small>Amazon Kunde</small></span></figcaption></figure><figure class="quote"><div class="stars">★★★★★</div><blockquote>„Die Fan Box ist genau das Richtige für alle, die Minions lieben. Hübsch zum Verschenken und voller kleiner Überraschungen.“</blockquote><figcaption class="person"><span class="avatar">S</span><span><b>Stephanie S.</b><small>Duftkerze.de Kunde</small></span></figcaption></figure></div></div></section>
 
-      <section class="shell section" id="entdecken"><div class="cta"><div class="cta-content"><div class="eyebrow">Bereit für deinen Duftmoment?</div><h2>Lass dein Zuhause ein bisschen mehr strahlen.</h2><p>Entdecke die filmreife Duftkollektion von Duftkerze.de und finde deinen persönlichen Lieblingsduft.</p><a class="button-dark" href="#">Zur Kollektion <span>→</span></a></div></div></section>
+      <section class="shell section" id="entdecken"><div class="cta"><div class="cta-content"><div class="eyebrow">Deine nächste Premiere</div><h2>Mach aus deinem Filmabend einen Duftmoment.</h2><p>Entdecke die Minions-Kollektion von Duftkerze.de und finde das Set, das zu deinem nächsten Sofa-Kino passt.</p><a class="button-dark" href="https://www.duftkerze.de/search?sSearch=Minions">Zur Kollektion <span>→</span></a><p class="cta-note">Direkt zu allen Produkten im Duftkerze.de Shop.</p></div></div></section>
     </main>
 
-    <footer><div class="shell"><div class="footer-top"><div><img class="footer-logo" src="github-pages-upload/Logo-Duftkerze.png" alt="Duftkerze.de" /><p class="footer-copy">Handgegossene Duftmomente für ein Zuhause, das sich nach dir anfühlt.</p></div><div class="footer-links"><a href="#">Über uns</a><a href="#">Kontakt</a><a href="#">Versand</a><a href="#">FAQ</a><a href="#">Impressum</a><a href="#">Datenschutz</a></div></div><div class="footer-bottom"><span>© 2026 Duftkerze.de. Alle Rechte vorbehalten.</span><span>Minions ist eine Marke ihrer jeweiligen Rechteinhaber. Kampagnenkonzept.</span></div></div></footer>
+    <footer><div class="shell"><div class="footer-top"><div><a class="footer-logo-link" href="https://www.duftkerze.de/" aria-label="Zum Duftkerze.de Shop"><img class="footer-logo" src="github-pages-upload/Logo-Duftkerze.png" alt="Duftkerze.de" /></a><p class="footer-copy">Handgegossene Duftmomente für ein Zuhause, das sich nach dir anfühlt.</p></div><div class="footer-links"><a href="https://www.duftkerze.de/">Zum Shop</a><a href="https://www.duftkerze.de/kontaktformular">Kontakt</a><a href="https://www.duftkerze.de/versand-und-zahlungsbedingungen">Versand</a><a href="https://www.duftkerze.de/kerzenpflege">FAQ</a><a href="https://www.duftkerze.de/impressum">Impressum</a><a href="https://www.duftkerze.de/datenschutz">Datenschutz</a></div></div><div class="footer-bottom"><span>© 2026 Duftkerze.de. Alle Rechte vorbehalten.</span><span>Minions ist eine Marke ihrer jeweiligen Rechteinhaber. Kampagnenkonzept.</span></div></div></footer>
   </body>
 </html>
